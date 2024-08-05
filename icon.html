@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Icons</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .contact-icons {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .icon {
+            background-color: #fff;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+            text-decoration: none; /* Remove underline */
+        }
+
+        .icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .icon i {
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+
+        .icon.whatsapp i {
+            color: #25D366;
+        }
+
+        .icon.instagram i {
+            color: #E1306C;
+        }
+
+        .icon.linkedin i {
+            color: #0077B5;
+        }
+
+        .icon.phone i {
+            color: #34B7F1;
+        }
+
+        .icon.whatsapp:hover {
+            background-color: #25D366;
+        }
+
+        .icon.whatsapp:hover i {
+            color: #fff;
+        }
+
+        .icon.instagram:hover {
+            background-color: #E1306C;
+        }
+
+        .icon.instagram:hover i {
+            color: #fff;
+        }
+
+        .icon.linkedin:hover {
+            background-color: #0077B5;
+        }
+
+        .icon.linkedin:hover i {
+            color: #fff;
+        }
+
+        .icon.phone:hover {
+            background-color: #34B7F1;
+        }
+
+        .icon.phone:hover i {
+            color: #fff;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .contact-icons {
+                right: 10px;
+            }
+
+            .icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            .icon i {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contact-icons">
+        <a href="https://wa.me/yourphonenumber" target="_blank" class="icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/yourusername" target="_blank" class="icon instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="icon linkedin"><i class="fab fa-linkedin"></i></a>
+        <a href="tel:yourphonenumber" class="icon phone"><i class="fas fa-phone"></i></a>
+    </div>
+
+<script>
+    window.addEventListener('scroll', function() {
+        const icons = document.querySelector('.contact-icons');
+        if (window.scrollY > 100) {
+            icons.style.opacity = '0';
+            icons.style.pointerEvents = 'none';
+        } else {
+            icons.style.opacity = '1';
+            icons.style.pointerEvents = 'auto';
+        }
+    });
+</script>
+
+</body>
+</html>
